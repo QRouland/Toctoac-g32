@@ -1,12 +1,15 @@
 package controleur;
 
+import vue.DlgLogin;
+
 public class CtrlLogin {
-	//attributs
 	
-	//Constructeurs
-	public CtrlLogin (){};
+	public void ctrl () {
 	
-	//méthodes 
+	DlgLogin fen = new DlgLogin("S'identifier");
 	
+	fen.setBounds(500, 250, 500, 150) ;
+	fen.setVisible(true);
+	} ;
 	
 }

@@ -1,6 +1,5 @@
 package controleur;
 
-import vue.AfficherListeMembre;
 import vue.AjoutPersonne;
 
 public class CtrlSaisieMembre {

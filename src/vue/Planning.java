@@ -54,7 +54,7 @@ public class Planning extends JPanel {
   }
  
   /**
-   * Construit un calendrier, en donnant le jour, mois, annï¿½e
+   * Construit un calendrier, en donnant le jour, mois, annee
    *
    * @exception IllegalArgumentException
    *                Si l'annï¿½e n'est pas correcte
@@ -73,13 +73,13 @@ public class Planning extends JPanel {
     dd = today;
   }
  
-  String[] months = { "Janvier", "Fï¿½vrier", "Mars", "Avril", "Mai", "Juin",
-      "Juillet", "Aoï¿½t", "Septembre", "Octobre", "Novembre", "Dï¿½cembre" };
+  String[] months = { "Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin",
+      "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Decembre" };
  
 
   private String buildGUI() {
     getAccessibleContext().setAccessibleDescription(
-        "Calendrier non disponible, dï¿½solï¿½");
+        "Calendrier non disponible, desole");
     setBorder(BorderFactory.createEtchedBorder());
  
     setLayout(new BorderLayout());
@@ -201,7 +201,7 @@ public class Planning extends JPanel {
     if (thisYear == yy && mm == thisMonth)
     	setDayActive(dd);
     
-    // Recharge l'ï¿½cran
+    // Recharge l'ecran
     repaint();
   }
  
@@ -268,10 +268,10 @@ public class Planning extends JPanel {
    
   
   private void print_button() {
-	  // rajouter bouton inscrire / dï¿½sinscrire, si jour dispo ou non
+	  // rajouter bouton inscrire / desinscrire, si jour dispo ou non
 	    
 	    this.b_inscrire = new JButton("S'inscrire") ;
-	    this.b_desinscrire = new JButton("Se dï¿½sinscrire") ;
+	    this.b_desinscrire = new JButton("Se desinscrire") ;
 	       
 	    b_inscrire.setEnabled(true) ;
 	    b_desinscrire.setEnabled(false) ;
