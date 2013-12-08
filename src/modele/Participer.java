@@ -112,6 +112,15 @@ public class Participer {
 		
 	}
 	
+	/**
+	 * retourne une liste de participants (id) pour un evenement (id)
+	 * @param pIdEvenement
+	 * @return
+	 * @throws InstantiationException
+	 * @throws IllegalAccessException
+	 * @throws ClassNotFoundException
+	 * @throws SQLException
+	 */
 	public ResultSet getListeParticipants(int pIdEvenement) throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException
 	{
 		Statement statement;
@@ -136,6 +145,15 @@ public class Participer {
 		return resultat;
 	}
 	
+	/**
+	 * permet d'obtenir une liste d'evenements auquel participe un membre (id)
+	 * @param pIdMembre
+	 * @return
+	 * @throws InstantiationException
+	 * @throws IllegalAccessException
+	 * @throws ClassNotFoundException
+	 * @throws SQLException
+	 */
 	public ResultSet getListeParticipation (int pIdMembre) throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException
 	{
 		Statement statement;

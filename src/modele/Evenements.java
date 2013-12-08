@@ -15,6 +15,16 @@ public class Evenements {
 	public Evenements(){};
 	
 	//méthodes
+	/**
+	 * permet l'ajout d'un evenement
+	 * @param pDate
+	 * @param pType
+	 * @param pLieu
+	 * @throws InstantiationException
+	 * @throws IllegalAccessException
+	 * @throws ClassNotFoundException
+	 * @throws SQLException
+	 */
 	public void setEvenement(String pDate, int pType, String pLieu) throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException
 	{
 		//connexion à la base

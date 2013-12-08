@@ -1,4 +1,3 @@
-package controleur;
 import java.awt.Container;
 import java.awt.FlowLayout;
 import java.sql.ResultSet;
@@ -26,6 +25,10 @@ public class CtrlAccesListe {
 		Container c = f_planning.getContentPane();
 		c.setLayout(new FlowLayout());
 		
+	
+		
+		
+		
 		// cr�e le planning � la date actuelle
 		c.add(p);
 		/*
@@ -39,7 +42,6 @@ public class CtrlAccesListe {
 		f_planning.setResizable(false) ;
 		
 		
-		//ajout d'un evenemebts test
 		e = new Evenements();
 		
 		e.setEvenement("2012-11-20", 1, "toulouse");

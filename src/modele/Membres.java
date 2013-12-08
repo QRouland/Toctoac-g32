@@ -102,6 +102,14 @@ public class Membres {
 		return resultat;
 	}
 	
+	/**
+	 * Permet de supprimer un membre a partir de don id
+	 * @param pIdMembre
+	 * @throws InstantiationException
+	 * @throws IllegalAccessException
+	 * @throws ClassNotFoundException
+	 * @throws SQLException
+	 */
 	public void supprimer(int pIdMembre) throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException
 	{
 		Statement statement;
