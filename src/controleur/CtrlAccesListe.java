@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 import javax.swing.JFrame;
 
+import vue.AfficherListeMembre;
 import vue.Planning;
 
 import modele.Evenements;
@@ -13,7 +14,9 @@ import modele.Evenements;
 
 public class CtrlAccesListe {
 	
-	public static void main(String[] args) throws SQLException, InstantiationException, IllegalAccessException, ClassNotFoundException{
+	
+	
+	public void ctrl() throws SQLException, InstantiationException, IllegalAccessException, ClassNotFoundException{
 		Evenements e;
 		ResultSet r;
 
@@ -52,6 +55,7 @@ public class CtrlAccesListe {
 			p.color_date(Integer.decode( str[2]));
 			
 		}
+		
 		
 		
 		
