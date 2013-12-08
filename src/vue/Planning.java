@@ -48,7 +48,7 @@ public class Planning extends JPanel {
     super();
     setYYMMDD(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
         calendar.get(Calendar.DAY_OF_MONTH));
-    buildGUI();
+    System.out.println(buildGUI());
     recompute();
     print_button() ;
   }
@@ -62,7 +62,7 @@ public class Planning extends JPanel {
    public Planning(int year, int month, int today) {
     super();
     setYYMMDD(year, month, today);
-    buildGUI();
+    System.out.println(buildGUI());
     recompute();
     print_button() ;
   }
@@ -73,13 +73,13 @@ public class Planning extends JPanel {
     dd = today;
   }
  
-  String[] months = { "Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin",
-      "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre" };
+  String[] months = { "Janvier", "F�vrier", "Mars", "Avril", "Mai", "Juin",
+      "Juillet", "Ao�t", "Septembre", "Octobre", "Novembre", "D�cembre" };
  
-  /** Build the GUI. Assumes that setYYMMDD has been called. */
-  private void buildGUI() {
+
+  private String buildGUI() {
     getAccessibleContext().setAccessibleDescription(
-        "Calendrier non disponible, desole");
+        "Calendrier non disponible, d�sol�");
     setBorder(BorderFactory.createEtchedBorder());
  
     setLayout(new BorderLayout());
@@ -97,6 +97,7 @@ public class Planning extends JPanel {
         int i = monthChoice.getSelectedIndex();
         if (i >= 0) {
           mm = i;
+        System.out.println("Mois=" + mm);
           recompute();
         }
       }
@@ -120,6 +121,7 @@ public class Planning extends JPanel {
         if (i >= 0) {
           yy = Integer.parseInt(yearChoice.getSelectedItem()
               .toString());
+          System.out.println("Annee=" + yy);
           recompute();
         }
       }
@@ -145,7 +147,7 @@ public class Planning extends JPanel {
         if (!num.equals("")) {
           // met le jour actuel d'une couleur
           setDayActive(Integer.parseInt(num));
-        }        
+        }    
       }
     };
  
@@ -158,6 +160,8 @@ public class Planning extends JPanel {
       }
  
     add(BorderLayout.CENTER, bp);
+    
+    return (Integer.toString(yy) + Integer.toString(mm)) ;
   }
  
   public final static int dom[] = { 31, 28, 31, 30, /* jan fev mar avr */
@@ -192,8 +196,8 @@ public class Planning extends JPanel {
     for (int i = leadGap + 1 + daysInMonth; i < 6 * 7; i++) {
       labs[(i) / 7][(i) % 7].setText("");
     }
- 
-    // Shade current day, only if current month
+
+    
     if (thisYear == yy && mm == thisMonth)
     	setDayActive(dd);
     
@@ -217,7 +221,7 @@ public class Planning extends JPanel {
   /** Set l'ann�e, le mois et le jour */
   public void setDate(int yy, int mm, int dd) {
     this.yy = yy;
-    this.mm = mm; // starts at 0, like Date
+    this.mm = mm; // commence a 0
     this.dd = dd;
     recompute();
   }
@@ -236,7 +240,7 @@ public class Planning extends JPanel {
  
   private int activeDay = -1;
  
-  /** Set just the day, on the current month */
+
   public void setDayActive(int newDay) {
  
     clearDayActive();
@@ -267,7 +271,7 @@ public class Planning extends JPanel {
 	  // rajouter bouton inscrire / d�sinscrire, si jour dispo ou non
 	    
 	    this.b_inscrire = new JButton("S'inscrire") ;
-	    this.b_desinscrire = new JButton("Se desinscrire") ;
+	    this.b_desinscrire = new JButton("Se d�sinscrire") ;
 	       
 	    b_inscrire.setEnabled(true) ;
 	    b_desinscrire.setEnabled(false) ;
@@ -290,7 +294,6 @@ public class Planning extends JPanel {
   public void color_date(int day) {
 	  setTaskDay(day) ;
   }
+
   
-
-
 } 
